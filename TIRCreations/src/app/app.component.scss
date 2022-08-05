@@ -1,0 +1,16 @@
+.page-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(57, 143, 255);
+    .center {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .message {
+            font-family: cursive;
+            text-align: center;
+        }
+    }
+}

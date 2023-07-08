@@ -1,9 +1,42 @@
 <div class="page-container">
-  <div class="center">
-    <div class="message">
-      <h1>Transferring Inner Reflections</h1>
-      <h3>This site is currently a work in progress</h3>
-      <h3>Please check back soon</h3>
+  <nav class="navbar">
+    <a href="#/" class="active">TIR Creations</a>
+    <ul id="navbar-links">
+      <li class="col">
+        <a class="nav-link" href="#productsSection">
+          <h5>Products</h5>
+        </a>
+      </li>
+      <li class="col">
+        <a class="nav-link" href="#aboutUsSection">
+          <h5>About Us</h5>
+        </a>
+      </li>
+      <li class="col">
+        <a class="nav-link" href="#contactSection">
+          <h5>Contact</h5>
+        </a>
+      </li>
+    </ul>
+    <a class="hamburger icon" (click)="navBarHamburgerClick()">
+      <img src="../assets/icon-hamburger.png">
+    </a>
+  </nav>
+
+  <router-outlet></router-outlet>
+
+  <footer>
+    <div class="container">
+      <div class="text">
+        <p>©TIR Creations 2023</p>
+      </div>
+      <div class="icons">
+        <div class="icon">
+          <a href="https://www.etsy.com/" target="_blank" rel="noopener">
+            <img src="../assets/icon-etsy.png">
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
+  </footer>
 </div>

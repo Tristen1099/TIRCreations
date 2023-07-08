@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href https://tircreations.com",
+    "build": "ng build --base-href https://tircreations.com --output-path=dist ",
+    "deploy": "npm run gh-pages",
+    "gh-pages": "gh-pages -d dist",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -20,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "gh-pages": "^5.0.0",
+    "gh-pages-cli": "^0.2.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
@@ -33,7 +36,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
-    "jasmine-core": "~3.4.0",
+    "jasmine-core": "~3.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
     "karma-chrome-launcher": "~2.2.0",

@@ -1,0 +1,66 @@
+@import "../mixins.scss";
+
+.project-container {
+  .header {
+    padding: 1em 0 0 0;
+
+    h2 {
+      @include componentHeader(white);
+
+      .fas {
+        @include componentHeaderIcon($colorContainerIconLight);
+      }
+    }
+  }
+}
+
+
+@media all and (max-width: 1200px) {
+  .project-container {
+    .header {
+      h2 {
+        font-size: 3.3em;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .project-container {
+    .header {
+      h2 {
+        font-size: 3.1em;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 800px) {
+  .project-container {
+    .header {
+      h2 {
+        font-size: 2.9em;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 600px) {
+  .project-container {
+    .header {
+      h2 {
+        font-size: 2.6em;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 400px) {
+  .project-container {
+    .header {
+      h2 {
+        font-size: 2.3em;
+      }
+    }
+  }
+}

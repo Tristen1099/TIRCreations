@@ -1,0 +1,143 @@
+@import '../mixins.scss';
+
+.hero-container {
+  height: 95vh;
+
+  .container {
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+
+    .row {
+      height: 100%;
+
+      .hero-text {
+        color: white;
+        text-align: center;
+
+        .hero-title {
+          padding: 1em 0;
+          font-size: 5em;
+        }
+        .hero-description {
+          font-size: 3em;
+          height: 9em;
+        }
+      }
+      .hero-image {
+        padding: 0;
+
+        img {
+          filter: grayscale(100%);
+          max-width: 100%;
+          height: auto;
+          max-height: 100%;
+          bottom: 0;
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%);
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .hero-container {
+    .container {
+      .row {
+        .col {
+          .hero-title {
+            font-size: 4.6em;
+          }
+          .hero-description {
+            font-size: 2.6em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .hero-container {
+    .container {
+      .row {
+        position: relative;
+
+        .hero-text {
+          position: absolute;
+          z-index: 10;
+          bottom: 0;
+          text-shadow: 5px 5px 10px $colorTextShadow;
+
+          .hero-title {
+            font-size: 4.3em;
+            padding: 0.5em 0;
+          }
+          .hero-description {
+            font-size: 2.3em;
+            height: 2.3em;
+            padding-bottom: 5em;
+          }
+        }
+        .hero-image {
+          flex-basis: unset;
+          flex-grow: unset;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 800px) {
+  .hero-container {
+    .container {
+      .row {
+        .hero-text {
+          .hero-title {
+            font-size: 4em;
+          }
+          .hero-description {
+            font-size: 2em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 600px) {
+  .hero-container {
+    .container {
+      .row {
+        .hero-text {
+          .hero-title {
+            font-size: 3.8em;
+          }
+          .hero-description {
+            font-size: 1.8em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 400px) {
+  .hero-container {
+    .container {
+      .row {
+        .hero-text {
+          .hero-title {
+            font-size: 3.4em;
+          }
+          .hero-description {
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+  }
+}

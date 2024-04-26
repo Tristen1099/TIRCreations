@@ -1,0 +1,325 @@
+@import "../mixins.scss";
+
+.contact-container {
+  .header {
+    padding: 1em 0 0 0;
+
+    h2 {
+      @include componentHeader(white);
+
+      .fas {
+        @include componentHeaderIcon($colorContainerIconLight);
+      }
+    }
+  }
+
+  .container {
+    background-color: $colorContainerBackgroundLight;
+    box-shadow: 0.5em 0.2em 1em 0.3em $colorContainerShadowDark;
+    border-radius: 1em;
+    border-color: $colorContainerBorderLight $colorContainerBorderDark $colorContainerBorderDark
+      $colorContainerBorderLight;
+    border-width: 1px;
+    border-style: solid;
+    width: 30%;
+    margin: 3em 35%;
+
+    .formHeader {
+      p {
+        width: 100%;
+        font-family: monospace;
+        font-size: 25px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        font-weight: 700;
+      }
+
+      .formHeaderSubDetails {
+        font-size: 21px;
+        font-weight: 600;
+      }
+    }
+
+    #contactForm {
+      color: black;
+      .row {
+        margin: 0;
+        padding: 0.5em 0;
+
+        .inputHeader {
+          font-family: monospace;
+          font-size: 25px;
+
+          .fas {
+            margin-right: 7px;
+          }
+        }
+
+        input,
+        textarea {
+          border-color: black;
+          background-color: $colorContainerInputBackground;
+          border-radius: 5px;
+          border-width: 1px;
+          width: 100%;
+          font-family: monospace;
+          font-size: 22px;
+          color: unset;
+          min-height: 40px;
+        }
+
+        textarea {
+          height: 100px;
+        }
+
+        .inputError {
+          color: darkred;
+          font-family: monospace;
+          font-size: 18px;
+          padding-top: 0.5em;
+          font-weight: 700;
+
+          label {
+            visibility: hidden;
+          }
+        }
+
+        .center {
+          color: white;
+          width: 30%;
+          margin: 1em auto 1em 35%;
+          animation-name: bouncy;
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+          position: relative;
+          background-color: $colorContainerButtonDark;
+          border-width: 0;
+          border-color: black;
+          border-radius: 5px;
+          transition: 0.5s;
+          position: relative;
+          vertical-align: middle;
+          height: 40px;
+
+          &::before,
+          &::after {
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            transform-origin: center;
+            box-sizing: inherit;
+            content: "";
+            position: absolute;
+          }
+
+          &::before {
+            border-radius: 5px;
+            border-top: 3px solid $colorContainerButtonBorder;
+            border-bottom: 3px solid $colorContainerButtonBorder;
+            transform: scale3d(0, 1, 1);
+          }
+
+          &::after {
+            border-radius: 5px;
+            border-left: 3px solid $colorContainerButtonBorder;
+            border-right: 3px solid $colorContainerButtonBorder;
+            transform: scale3d(1, 0, 1);
+          }
+
+          &:hover::before,
+          &:hover::after {
+            transform: scale3d(1, 1, 1);
+            transition: transform 1s;
+          }
+        }
+      }
+
+      #nameRow:focus-within,
+      #emailRow:focus-within,
+      #messageRow:focus-within {
+        .inputHeader {
+          transform: scale(1.1);
+          color: $colorTextDark;
+        }
+      }
+    }
+  }
+}
+
+#formSubmitOverlay {
+  @include windowOverLay();
+}
+
+@keyframes bouncy {
+  0% {
+    top: 0em;
+  }
+  40% {
+    top: 0em;
+  }
+  43% {
+    top: -0.9em;
+  }
+  46% {
+    top: 0em;
+  }
+  48% {
+    top: -0.4em;
+  }
+  50% {
+    top: 0em;
+  }
+  100% {
+    top: 0em;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .contact-container {
+    .header {
+      h2 {
+        font-size: 3.3em;
+      }
+    }
+    .container {
+      width: 45%;
+      margin: 3em 27.5%;
+    }
+  }
+
+  #formSubmitOverlay {
+    #text {
+      h2 {
+        font-size: 1.8rem;
+      }
+      h3 {
+        font-size: 1.6rem;
+      }
+      button {
+        width: 35%;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .contact-container {
+    .header {
+      h2 {
+        font-size: 3.1em;
+      }
+    }
+    .container {
+      width: 55%;
+      margin: 3em 22.5%;
+    }
+  }
+
+  #formSubmitOverlay {
+    #text {
+      h2 {
+        font-size: 1.6rem;
+      }
+      h3 {
+        font-size: 1.4rem;
+      }
+      button {
+        width: 40%;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 800px) {
+  .contact-container {
+    .header {
+      h2 {
+        font-size: 2.9em;
+      }
+    }
+    .container {
+      width: 70%;
+      margin: 3em 15%;
+    }
+  }
+
+  #formSubmitOverlay {
+    #text {
+      h2 {
+        font-size: 1.4rem;
+      }
+      h3 {
+        font-size: 1.2rem;
+      }
+      button {
+        width: 45%;
+
+        p {
+          font-size: 0.4em;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 600px) {
+  .contact-container {
+    .header {
+      h2 {
+        font-size: 2.6em;
+      }
+    }
+    .container {
+      width: 80%;
+      margin: 3em 10%;
+    }
+  }
+
+  #formSubmitOverlay {
+    #text {
+      h2 {
+        font-size: 1.2rem;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+      button {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 400px) {
+  .contact-container {
+    .header {
+      h2 {
+        font-size: 2.3em;
+      }
+    }
+    .container {
+      width: 90%;
+      margin: 3em 5%;
+    }
+  }
+
+  #formSubmitOverlay {
+    #text {
+      h2 {
+        font-size: 1rem;
+      }
+      h3 {
+        font-size: 0.8rem;
+      }
+      button {
+        width: 55%;
+
+        p {
+          font-size: 0.3em;
+        }
+      }
+    }
+  }
+}

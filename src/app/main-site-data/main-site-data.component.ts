@@ -10,5 +10,8 @@ export class MainSiteDataComponent {
 
   constructor() { }
 
+  ngAfterViewInit() {
+    document.getElementsByTagName('body')[0].style.overflowY = "scroll";
+  }
 
 }

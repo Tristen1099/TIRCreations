@@ -11,7 +11,7 @@ body {
   height: 100%;
 
   .layer {
-    background-color: rgba(black, 0.97);
+    background-color: rgba(255, 251, 236, 0.96);
     background-attachment: fixed;
     z-index: 0;
     width: 100vw;
@@ -30,5 +30,5 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background-color: $colorScrollBar;
-  outline: 1px solid white;
+  outline: 1px solid #afaac6;
 }

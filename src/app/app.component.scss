@@ -42,20 +42,20 @@
             margin: 0 auto;
             font-size: 2.5em;
             a {
-              color: white;
+              color: $themeColor;
               text-decoration: none !important;
             }
           }
 
           a {
-            color: white;
+            color: $themeColor;
             text-decoration: none !important;
           }
 
           h5 {
             margin: 0 auto;
             font-size: 2em;
-            color: white;
+            color: $themeColor;
           }
         }
 
@@ -63,7 +63,7 @@
         a:hover {
           h4,
           h5 {
-            color: $colorTextLight;
+            color: $colorTextSemiLight;
           }
 
           h5:before,
@@ -95,7 +95,7 @@
           position: absolute;
           opacity: 0;
           font-size: 25px;
-          color: white;
+          color: #AFAAC6;
           transition: all 0.3s;
           bottom: 10px;
         }
@@ -103,14 +103,14 @@
         .active,
         h4 {
           a:hover {
-            color: $colorTextLight !important;
+            color: $colorTextSemiLight !important;
           }
         }
 
         .active {
           h4,
           a {
-            color: $colorTextLight !important;
+            color: $colorTextSemiLight !important;
             animation-name: floating;
             animation-duration: 2.5s;
             animation-iteration-count: infinite;
@@ -130,7 +130,7 @@
           .hamburger-inner,
           .hamburger-inner::before,
           .hamburger-inner::after {
-            background-color: white;
+            background-color: #AFAAC6;
           }
         }
       }
@@ -156,7 +156,7 @@
 
         .text {
             p {
-              color: white;
+              color: #AFAAC6;
               margin: 0;
             }
           }
@@ -164,7 +164,7 @@
             .fab {
               font-size: 2.5em;
               padding: 0.5em;
-              color: white;
+              color: #AFAAC6;
             }
           }
     }

@@ -1,9 +1,10 @@
-$themeColor: blue;
+$themeColor: #b4a8e3;
 
 $colorThemeDark: scale-color($themeColor, $lightness: -35%);
 $colorThemeVeryDark: scale-color($themeColor, $lightness: -85%);
 $colorBorder: scale-color(desaturate($themeColor, 50), $lightness: -10%);
 $colorTextLight: scale-color($themeColor, $lightness: 74.4%);
+$colorTextSemiLight: scale-color($themeColor, $lightness: 25%);
 $colorTextDark: scale-color($themeColor, $lightness: -80%);
 $colorTextShadow: scale-color(adjust-hue($themeColor, 20deg), $lightness: 2%);
 $colorScrollBar: scale-color($themeColor, $lightness: -10%);
@@ -110,18 +111,18 @@ $colorContainerBorderDark: scale-color(desaturate($themeColor, 55), $lightness: 
         top: 50%;
         left: 50%;
         font-size: 50px;
-        color: white;
+        color: #AFAAC6;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
 
         h2 {
             border-width: 0 0 1px 0;
-            border-color: white;
+            border-color: #AFAAC6;
             border-style: solid;
         }
 
         button {
-            color: white;
+            color: #AFAAC6;
             width: 30%;
             background-color: $colorContainerButtonDark;
             border-color: black;

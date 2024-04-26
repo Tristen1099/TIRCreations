@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import * as $ from 'jquery';
+import jQuery from 'jquery';
 
 @Component({
   selector: 'app-contact-me',

@@ -1,5 +1,4 @@
 import { Component, HostListener } from '@angular/core';
-import * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -40,3 +39,24 @@ export class AppComponent {
   }
 
 }
+
+jQuery(document).ready(function () {
+  jQuery("a").on('click', function (this: HTMLAnchorElement, event: any) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      hash = hash.replace(/\//g, '');
+      if (jQuery(hash).offset()) {
+        var offset = jQuery(hash).offset();
+        if (offset) {
+          var scrollPos = offset.top;
+          jQuery('html, body').animate({
+            scrollTop: scrollPos
+          }, 800, function () {
+            window.location.hash = hash;
+          });
+        }
+      }
+    }
+  });
+});

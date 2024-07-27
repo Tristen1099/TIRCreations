@@ -1,0 +1,103 @@
+@import "../mixins.scss";
+
+.store-container {
+  .header {
+    padding: 1em 0 0 0;
+
+    h2 {
+      @include componentHeader(#AFAAC6);
+
+      .fas {
+        @include componentHeaderIcon($colorContainerIconLight);
+      }
+    }
+  }
+
+  .container {
+    background-color: $colorContainerBackgroundLight;
+    box-shadow: 0.5em 0.2em 1em 0.3em $colorContainerShadowDark;
+    border-radius: 1em;
+    border-color: $colorContainerBorderLight $colorContainerBorderDark $colorContainerBorderDark
+      $colorContainerBorderLight;
+    border-width: 1px;
+    border-style: solid;
+    width: 70%;
+    margin: 3em auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+    .container > .image-container {
+      margin: 5px;
+      padding: 10px;
+      margin-left: 10px;
+    }
+
+    .image-container {
+      height: 200px;
+      width: 100px;
+      background-color: #f9effd;
+      margin: 15px;
+      display: flex;
+      border-radius: .75em;
+      box-shadow: 0.5em 0.2em 1em 0.3em $colorContainerShadowDark;
+
+      img {
+        height: 200px;
+        margin: auto;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+
+@media all and (max-width: 1200px) {
+  .store-container {
+    .header {
+      h2 {
+        font-size: 3.3em;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .store-container {
+    .header {
+      h2 {
+        font-size: 3.1em;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 800px) {
+  .store-container {
+    .header {
+      h2 {
+        font-size: 2.9em;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 600px) {
+  .store-container {
+    .header {
+      h2 {
+        font-size: 2.6em;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 400px) {
+  .store-container {
+    .header {
+      h2 {
+        font-size: 2.3em;
+      }
+    }
+  }
+}

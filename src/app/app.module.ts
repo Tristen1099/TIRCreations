@@ -9,6 +9,8 @@ import { HeroIntroComponent } from './hero-intro/hero-intro.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { MainSiteDataComponent } from './main-site-data/main-site-data.component';
+import { AboutComponent } from './about/about.component';
+import { StoreComponent } from './store/store.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { MainSiteDataComponent } from './main-site-data/main-site-data.component
     HeroIntroComponent,
     GalleryComponent,
     ContactMeComponent,
-    MainSiteDataComponent
+    MainSiteDataComponent,
+    AboutComponent,
+    StoreComponent
   ],
   imports: [
     BrowserModule,
